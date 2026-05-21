@@ -1,0 +1,130 @@
+/* --- KAPSAMLI CSS DOKÜMANTASYONU --- */
+
+/* Evrensel Sıfırlama: Tarayıcıların varsayılan boşluklarını sıfırlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sayfa Arka Planı ve Merkeze Hizalama */
+body {
+    background-color: #0b0f19; /* Çok koyu lacivert/siyah */
+    color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Ana Sohbet Kutusu Tasarımı */
+.chat-container {
+    width: 100%;
+    max-width: 800px;
+    height: 80vh;
+    background-color: #111827; /* Kutu içi koyu gri */
+    border: 1px solid #1f2937;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Neon gölge efekti */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+/* Üst Başlık Alanı */
+.chat-header {
+    background-color: #1f2937;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #374151;
+}
+
+.chat-header h1 {
+    font-size: 1.5rem;
+    color: #3b82f6; /* Siber Mavi Vurgu */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Mesaj Alanı Akışı */
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Mesajlar dolunca dikey kaydırma çubuğu çıkar */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Genel Mesaj Balonu Ortak Özellikleri */
+.message {
+    max-width: 75%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Kullanıcı Mesaj Balonu (Sağ Taraf) */
+.user-message {
+    background-color: #2563eb;
+    color: #ffffff;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+/* Yapay Zeka Mesaj Balonu (Sol Taraf) */
+.ai-message {
+    background-color: #374151;
+    color: #e5e7eb;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+    border-left: 4px solid #10b981; /* Yapay zekayı ayıran yeşil çizgi */
+}
+
+/* Alt Giriş Paneli */
+.chat-input-area {
+    padding: 20px;
+    background-color: #1f2937;
+    border-top: 1px solid #374151;
+    display: flex;
+    gap: 10px;
+}
+
+/* Yazı Yazma Kutusu */
+.chat-input {
+    flex: 1;
+    background-color: #111827;
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+    padding: 12px;
+    color: #f3f4f6;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+/* Yazı kutusuna tıklandığında kenarlık mavi olur */
+.chat-input:focus {
+    border-color: #3b82f6;
+}
+
+/* Gönder Butonu */
+.send-btn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+/* Fareyle butonun üzerine gelindiğinde renk koyulaşır */
+.send-btn:hover {
+    background-color: #2563eb;
+}
